@@ -61,13 +61,11 @@ function find_dicom_file(file_gz)
         change_ext(file_gz, ".dcm"),
         change_ext(file_gz, "")
     ]
-    found_index = findall(isfile.(candidates))
+    found_index = findfirst(isfile.(candidates))
     if isempty(found_index)
         error(`Unzipped DICOM file not found for $(file_gz)`)
-    elseif length(found_index) > 1
-        error(`Unhandled: More than one DICOM file found for $(file_gz)`)
     end
-    return candidates[found_index][1]
+    return candidates[found_index]
 end
 
 change_ext(path, ext) = splitext(path)[1] * ext
