@@ -1,6 +1,6 @@
 module DICOMSamples
 
-const download_folder = joinpath(@__DIR__, "dicomSamples")
+const download_folder = joinpath(@__DIR__, "DICOMSamples")
 const temp_folder_for_gz = joinpath(@__DIR__, "gz")
 const temp_folder_for_zip = joinpath(@__DIR__, "zip")
 
