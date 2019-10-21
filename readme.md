@@ -27,6 +27,10 @@ The file were downloaded from different locations using the script `download_dic
 - `OT_Implicit_Little_Headless`
   + Image under the name of `OT-MONO2-8-a7` downloaded from [Barre's Collection][barre]
   + Tests if code can handle files which lack the 128-byte preamble	
+- `US_Explicit_Big_RGB.dcm`
+  + Image under the name of `US-RGB-8-epicard` downloaded from [Barra's Collection][barre]
+  + Tests if code can handle big-endian file
+  + The dicom image is 640x480, unlike most other dicom files where the number of columns and rows is identical. This is useful for testing if the data is being read in the right order.
 
 [barre]: https://barre.dev/medical/samples/
 [ispy-collection]: https://wiki.cancerimagingarchive.net/display/Public/ISPY1

@@ -10,7 +10,8 @@ const files_to_download = Dict(
     "MR_Explicit_Little_MultiFrame.dcm" => "https://dl.dropboxusercontent.com/s/8p3bpjvhnz2avzw/MR-MONO2-8-16x-heart.gz",
     "MR_Implicit_Little.dcm" => "https://dl.dropboxusercontent.com/s/2wdpdwbv3vs5glf/MR-MONO2-16-head.gz",
     "MR_UnspecifiedLength.dcm" => "https://drive.google.com/uc?export=download&id=1lm0750H-1O22O7Bqy0yfq0FK_vDrqC7-",
-    "OT_Implicit_Little_Headless.dcm" => "https://dl.dropboxusercontent.com/s/xlxfqfu974if96l/OT-MONO2-8-a7.gz"
+    "OT_Implicit_Little_Headless.dcm" => "https://dl.dropboxusercontent.com/s/xlxfqfu974if96l/OT-MONO2-8-a7.gz",
+    "US_Explicit_Big_RGB.dcm" => "https://dl.dropboxusercontent.com/s/y2l1myu5uw6bzlg/US-RGB-8-epicard.gz"
 )
 
 # [!] This function relies on the global variable `files_to_download`
@@ -80,7 +81,7 @@ function download_special_case_1()
     create_folder(temp_folder_for_zip, clean=true)
     fileMG_zip = joinpath(temp_folder_for_zip, "MG_Explicit_Little.zip")
     download("http://www.dclunie.com/images/pixelspacingtestimages.zip", fileMG_zip)
-    run(`unzip -o $fileMG_zip -d $temp_zip_folder`)
+    run(`unzip -o $fileMG_zip -d $temp_folder_for_zip`)
     unzipped_file = joinpath(temp_folder_for_zip, "DISCIMG", "IMAGES", "MGIMAGEA")
     downloaded_dicom = joinpath(download_folder, "MG_Explicit_Little.dcm")
     mv(unzipped_file, downloaded_dicom, force=true)
