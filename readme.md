@@ -8,6 +8,9 @@ The file were downloaded from different locations using the script `download_dic
 - `CT_Explicit_Little.dcm`
   + Computed tomography image under the name of `CT-MONO2-16-brain` downloaded from [Barre's Collection][barre]
   + Tests if the code can handle signed data, i.e. `(0028,0103) Pixel Representation = 1`
+- `CT_JPEG70.dcm`
+  + Computed tomography image under the name of `CT-MONO2-16-chest` downloaded from [Barre's Collection][barre]
+  + Tests if JPEG compressed image can be parsed
 - `CT_Implicit_Little_Headless_Retired.dcm`
   + Computed tomography image under the name of `CT-MONO2-12-lomb-an2` downloaded from [Barre's Collection][barre]
   + Tests if the code can handle retired dicom tags which might not exist in the dictionary

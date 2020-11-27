@@ -11,7 +11,8 @@ const files_to_download = Dict(
     "MR_Implicit_Little.dcm" => "https://dl.dropboxusercontent.com/s/2wdpdwbv3vs5glf/MR-MONO2-16-head.gz",
     "MR_UnspecifiedLength.dcm" => "https://drive.google.com/uc?export=download&id=1lm0750H-1O22O7Bqy0yfq0FK_vDrqC7-",
     "OT_Implicit_Little_Headless.dcm" => "https://dl.dropboxusercontent.com/s/xlxfqfu974if96l/OT-MONO2-8-a7.gz",
-    "US_Explicit_Big_RGB.dcm" => "https://dl.dropboxusercontent.com/s/y2l1myu5uw6bzlg/US-RGB-8-epicard.gz"
+    "US_Explicit_Big_RGB.dcm" => "https://dl.dropboxusercontent.com/s/y2l1myu5uw6bzlg/US-RGB-8-epicard.gz",
+    "CT_JPEG70.dcm" => "https://dl.dropboxusercontent.com/s/8zyuua7xc2w7859/CT-MONO2-16-chest.gz"
 )
 
 # [!] This function relies on the global variable `files_to_download`
