@@ -34,6 +34,8 @@ The file were downloaded from different locations using the script `download_dic
   + Image under the name of `US-RGB-8-epicard` downloaded from [Barra's Collection][barre]
   + Tests if code can handle big-endian file
   + The dicom image is 640x480, unlike most other dicom files where the number of columns and rows is identical. This is useful for testing if the data is being read in the right order.
+- `DX_Implicit_Little_Interleaved`:
+  + Obtained from [OHIF-Viewer's test data][https://github.com/OHIF/viewer-testdata/raw/master/dcm/zoo-exotic/5.dcm]
 
 [barre]: https://barre.dev/medical/samples/
 [ispy-collection]: https://wiki.cancerimagingarchive.net/display/Public/ISPY1
